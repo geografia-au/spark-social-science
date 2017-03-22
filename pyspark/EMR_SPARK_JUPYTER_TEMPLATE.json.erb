@@ -107,7 +107,7 @@
         "BootstrapActions": [{
           "Name": "Install-Python-Jupyter",
           "ScriptBootstrapAction": {
-            "Path": "s3://sabman-european-cities-analysis/jupyter_pyspark_emr5-proc.sh"
+            "Path": "<%= aws_bootstrap_bucket %>"
           }
         }],
         "Instances": {
@@ -139,7 +139,7 @@
         "JobFlowRole": "EMR_EC2_DefaultRole",
         "ServiceRole": "EMR_DefaultRole",
         "ReleaseLabel": "emr-5.2.0",
-        "LogUri": "s3://sabman-european-cities-analysis",
+        "LogUri": "<%= aws_logs_bucket%>",
         "Tags": [{
           "Key": "Name",
           "Value": "pyspark-jupyter"

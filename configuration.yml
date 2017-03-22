@@ -1,0 +1,3 @@
+pyspark:
+  aws_bootstrap_bucket: s3://sabman-european-cities-analysis
+  aws_logs_bucket: s3://sabman-european-cities-analysis
