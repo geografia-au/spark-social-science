@@ -22,7 +22,7 @@ This guide illustrates the (relatively) straight forward process to provide clus
 I am not a security expert and this guide does not specify security specifics necessary for secure data analysis. There are many important security considerations when doing data analysis in the cloud that this guide does not cover. Please make sure to consult with security experts whenever working in cloud compute.
 
 
-## Setup 
+## Setup
 
 Just a few steps will get you to working Spark Clusters. We're going to setup the bootstrap scripts first, then the CloudFormation script. Note that all the required changes that you need to make involve replacing text that contains the phrase 'goes-here'. Search for that phrase within the CloudFormation script and bootstrap files to make sure you have replaced all those text fields.
 
@@ -46,7 +46,7 @@ The CloudFormation Script needs a few changes to work as well.
 ### 3.a. Launch a Cluster with CloudFormation
 
 <ul>
-	<li>Go to CloudFormation on the AWS Dashboard - Hit Create Stack</li> 
+	<li>Go to CloudFormation on the AWS Dashboard - Hit Create Stack</li>
 	<li>Upload your CloudFormation Script - Hit Next</li>
 	<li>On the 'Specify Details' page, you need to make a few changes, though once you have these figured out you can add them to the CloudFormation script.</li>
 	<ul>
@@ -59,9 +59,9 @@ The CloudFormation Script needs a few changes to work as well.
 	<li>Hit next at the bottom of this screen, add tags if you want on the next screen, and hit Create Cluster.</li>
 	<li>Go to your EMR dashboard and grab the DNS for the Master node. The whole string (seen below as 'ec2-54-89-114-32.compute-1.amazonaws.com') is your public DNS. <img src="./cluster-dns.png">
 		<br>You should then be able to go to these URLs:
-		<ul> 
+		<ul>
 			<li>RStudio at DNS:8787 - note that RStudio by default needs a username and password. These are set to 'hadoop' for both, and does affect how you are logged into the master node. We have run into errors changing this username and would be happy to hear about an alternative / fix.</li>
-			<li>Jupyter Notebooks at DNS:8192</li>
+			<li>Jupyter Notebooks at DNS:8194</li>
 			<li>Ganglia Cluster Monitoring at DNS/ganglia </li>
 		</ul>
 	</li>

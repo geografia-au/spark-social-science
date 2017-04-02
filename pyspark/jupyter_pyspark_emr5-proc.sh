@@ -1,8 +1,8 @@
 #!/bin/bash
 set -x -e
 
-# AWS EMR bootstrap script 
-# for installing Python and Jupyter Notebooks on AWS EMR 5.3 with Spark 2.1.0 
+# AWS EMR bootstrap script
+# for installing Python and Jupyter Notebooks on AWS EMR 5.3 with Spark 2.1.0
 #
 # Adapted heavily from AWS Engineer Tom Zeng
 #
@@ -31,7 +31,7 @@ error_msg ()
 # Default parameters:
 PYTHON_PACKAGES=""
 DS_PACKAGES=true
-JUPYTER_PORT=8192
+JUPYTER_PORT=8194
 JUPYTER_PASSWORD=""
 PYSPARK_TUTORIALS=true
 INTERPRETERS="SQL,PySpark"
@@ -179,7 +179,7 @@ git clone https://github.com/apache/incubator-toree.git
 cd incubator-toree/
 
 make -j8 dist
-make release || true 
+make release || true
 
 if [[ $PYSPARK_TUTORIALS = true ]]; then
   git clone https://github.com/UrbanInstitute/pyspark-tutorials.git
@@ -231,4 +231,3 @@ background_install_proc &
 fi
 
 echo "Bootstrap action foreground process finished"
-
