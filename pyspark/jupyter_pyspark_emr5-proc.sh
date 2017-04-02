@@ -174,6 +174,8 @@ sudo python -m pip install -U ipython-sql rpy2
 cd /mnt
 curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
 sudo yum install docker sbt -y
+sudo usermod -aG docker $(whoami)
+sudo service docker restart
 
 git clone https://github.com/apache/incubator-toree.git
 cd incubator-toree/
@@ -228,6 +230,6 @@ jupyter notebook --no-browser &
 
 echo "Running background process to install Apacke Toree"
 background_install_proc &
-fi
+fi # if [ "$IS_MASTER" = true ]; then
 
 echo "Bootstrap action foreground process finished"
