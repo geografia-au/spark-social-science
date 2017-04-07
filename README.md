@@ -36,7 +36,7 @@ pyspark:
   aws_bootstrap_bucket: s3://sabman-european-cities-analysis
   aws_logs_bucket: s3://sabman-european-cities-analysis
 ```
-Just replace these with your buckets and then run the `create_bootstrap_script.rb` script. This script will generate a new CloudFormation Template.
+Just replace these with your buckets and then run the `ruby create_bootstrap_script.rb` script. This script will generate a new CloudFormation Template.
 
 Also change the CIDR IP to your organzation's or your personal computer's IP. This will only allow your organization or your computer to access the ports you are opening for Jupyter / Ganglia. This is optional, but know that if you do not do this, anyone can access your cluster at these ports.
 
